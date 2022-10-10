@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -10,11 +10,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text("Catalog App"),
       ),
       body: Center(
         child: Container(
-          child: Text("Welcome guys to day $days!"),
+          child: Text("Day $days of Week!"),
         ),
       ),
       drawer: Drawer(),
