@@ -61,27 +61,36 @@ class _LoignPageState extends State<LoignPage> {
                 ),
 
                 InkWell(
-                  onTap: (() {
+                  onTap: (() async {
                     setState(() {
                       changeButton = true;
                     });
-                    // Navigator.pushNamed(context, MyRoutes.homeroute);
+
+                    await Future.delayed((Duration(seconds: 1)));
+                    // ignore: use_build_context_synchronously
+                    Navigator.pushNamed(context, MyRoutes.homeroute);
                   }),
                   child: AnimatedContainer(
                     duration: Duration(seconds: 1),
                     height: 50,
-                    width: 150,
+                    width: changeButton ? 50 : 150,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                         color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(8)),
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18),
-                    ),
+                        borderRadius:
+                            BorderRadius.circular(changeButton ? 50 : 8)),
+                    child: changeButton
+                        ? Icon(
+                            Icons.done,
+                            color: Colors.white,
+                          )
+                        : Text(
+                            "Login",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18),
+                          ),
                   ),
                 )
                 // ElevatedButton(
