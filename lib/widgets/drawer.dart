@@ -9,8 +9,8 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // const imageUrl = "https://avatars.githubusercontent.com/u/76779874?v=4";
-    const imageUrl = "https://avatars.githubusercontent.com/u/76779874?v=4";
-
+    const imageUrl =
+        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg";
     return Drawer(
       child: Container(
         color: Colors.deepPurple,
