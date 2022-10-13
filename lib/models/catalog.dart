@@ -1,15 +1,7 @@
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 
 class CatalogModel {
-  static List<Item> items = [
-    Item(
-        id: 1,
-        name: "IPhone 12 Pro",
-        desc: "Apple IPhone 12th generation",
-        price: 999,
-        color: "#33505a",
-        image: "https://m.media-amazon.com/images/I/51KHjEhXtKL._AC_SX679_.jpg")
-  ];
+  static List<Item> items = [];
 }
 
 class Item {
